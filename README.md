@@ -1,2 +1,2 @@
-# anna.maria.pashuk-gmail.com
-Сoursework
+# Сoursework
+

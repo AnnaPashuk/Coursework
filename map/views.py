@@ -1,5 +1,4 @@
 import requests
-import sys
 import wikipedia
 from django.shortcuts import render
 from .models import City

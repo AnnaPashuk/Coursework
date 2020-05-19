@@ -77,5 +77,17 @@ pip install wikipedia
 Site interface:
 ![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/site_interface.jpg)
 
+
+
 ![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/hotels_list1.jpg)
+
+
 ![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/hotels_list2.jpg)
+
+## Credit
+
+* Anna Pashuk, Ukrainian Catholic University, 2020
+
+## Licence
+
+

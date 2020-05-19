@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotels Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+		.more {display: none;}
+        #map {
+        height: 400px;
+        width: 500px;
+    }
+	</style>
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">FIND YOUR PERFECT HOTEL !</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Main Page</a>
+      </nav>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-5 offset-1">
+                <h1>Your city</h1>
+                <form action="" method="post">
+
+                    {% csrf_token %}
+                    <label for="city"></label>
+                    {{ form.name }}
+
+                    <input type="submit", name="send", value="Find !", class="mt-2 btn btn-danger">
+                </form>
+
+                <h1>Hotels map</h1>
+                <div id="map"></div>
+                    {% for city in all_info %}
+                    <script>
+                        function initMap() {
+                            console.log({{city.lat}}, {{city.lng}});
+                            var pos = {"lat": {{city.lat}}, "lng": {{city.lng}}};
+                            var opt;
+                            opt = {
+                                center: pos,
+                                zoom: 12
+                            };
+                            var myMap = new google.maps.Map(document.getElementById('map'), opt);
+                            {% for hotel in city.hotels %}
+                                var marker_pos = {"lat": {{hotel.lat}}, "lng": {{hotel.lng}}};
+                                console.log(marker_pos);
+                                var marker = new google.maps.Marker({
+                                    position: marker_pos,
+                                    map: myMap,
+                                    title: "Marker",
+                                    icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                                });
+
+                                marker.addListener("click", function () {
+                                    info.open(myMap, marker);
+                                })
+                            {% endfor %}
+                        }
+                    </script>
+                    {% endfor %}
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8Yg8zsn2E2YXROgYGaKz-LxiBU9QC5Ac&callback=initMap"
+                    async defer></script>
+
+                <h1>Hotels list</h1>
+                {% for city in all_info %}
+                <h1>Hotels in {{city.city}}</h1>
+                    {% for hotel in city.hotels %}
+                        <div class="alert alert-info">
+                            <div class="row">
+                                <div class="col-9">
+                                    <b>Hotel:</b> {{hotel.name}}<br>
+                                    <b>Address:</b> {{hotel.address}}<br>
+                                    <b>Rating:</b> {{hotel.rating}}<br>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+                </div>
+
+
+            <div class="col-4 offset-1">
+
+                <h1>General information</h1>
+                {% for info in all_info %}
+                <div class="alert alert-info">
+                    <div class="row">
+                        <div class="col-9">
+                            <b>City:</b> {{info.city}}<br>
+                            <b>Description:</b>
+                            <p>{{info.description_p1}}<span id="dots{{forloop.counter}}">...</span>
+                            <span id="more{{forloop.counter}}" class="more">{{info.description_p2}}</span></p>
+                            <script>
+                                function readMore(num) {
+                                  var dots = document.getElementById("dots" + num);
+                                  var moreText = document.getElementById("more" + num);
+                                  var btnText = document.getElementById("btn" + num);
+
+                                  if (dots.style.display === "none") {
+                                    dots.style.display = "inline";
+                                    btnText.innerHTML = "Read more";
+                                    moreText.style.display = "none";
+                                  } else {
+                                    dots.style.display = "none";
+                                    btnText.innerHTML = "Read less";
+                                    moreText.style.display = "inline";
+                                  }
+                            }
+                            </script>
+                            <button onclick="readMore({{forloop.counter}})" id="btn{{forloop.counter}}">Read more</button>
+
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+                <img src="static/picture.jpg", height="400", width="400">
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

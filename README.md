@@ -72,6 +72,9 @@ pip install django
 pip install wikipedia
 ```
 
+Also you need Google Maps API 
+You gen get it here: https://cloud.google.com/maps-platform/?_ga=2.228158749.1663879752.1589873602-2070032628.1586961081
+
 ## Usage examples
 
 Site interface:

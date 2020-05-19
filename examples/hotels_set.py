@@ -7,6 +7,7 @@ query using Google Places API
 # importing required modules
 import json
 import requests
+from examples.key import key
 
 
 def create_hotels_dict(city):
@@ -39,15 +40,14 @@ def create_hotels_dict(city):
     print(results)
     print(type(results))
     print(results[0]['geometry']['location']['lat'])
-    # hotels_dict = {}
-    # for i in range(len(results)):
-    #     hotels_dict[results[i]['name']] = (results[i]['formatted_address'], results[i]['rating'],
-    #                                        (results[i]['geometry']['location']['lat'],
-    #                                         results[i]['geometry']['location']['lng']))
-    # return hotels_dict
+    hotels_dict = {}
+    for i in range(len(results)):
+        hotels_dict[results[i]['name']] = (results[i]['formatted_address'], results[i]['rating'],
+                                           (results[i]['geometry']['location']['lat'],
+                                            results[i]['geometry']['location']['lng']))
+    return hotels_dict
 
 
 if __name__ == "__main__":
-    # CITY = input('In what city do you want to search hotels?: ')
-    CITY= 'Lviv'
+    CITY = input('In what city do you want to search hotels?: ')
     print(create_hotels_dict(CITY))

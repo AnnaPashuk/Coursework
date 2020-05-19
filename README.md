@@ -55,7 +55,22 @@ Video preview:
 
 ## Installation
 
+Clone repasitory: 
+git clone https://github.com/AnnaPashuk/Coursework
 
+Install:
+
+```bash
+pip install requests
+```
+
+```bash
+pip install django
+```
+
+```bash
+pip install wikipedia
+```
 
 ## Usage examples
 

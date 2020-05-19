@@ -1,1 +1,1 @@
-key = "AIzaSyC8Yg8zsn2E2YXROgYGaKz-LxiBU9QC5Ac"
+key = {YOUR KEY}

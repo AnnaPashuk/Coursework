@@ -12,7 +12,7 @@ def info(request):
     with all information
     :return : dict
     """
-    key = "AIzaSyC8Yg8zsn2E2YXROgYGaKz-LxiBU9QC5Ac"
+    key = {YOUR GOOGLE PLACES API KEY}
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query={}&key=" + key
 
     if request.method == 'POST':

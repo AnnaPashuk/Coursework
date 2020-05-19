@@ -16,13 +16,15 @@
 </head>
 <body>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-      <h5 class="my-0 mr-md-auto font-weight-normal">Hotels App</h5>
+      <h5 class="my-0 mr-md-auto font-weight-normal">FIND YOUR PERFECT HOTEL !</h5>
       <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">Main</a>
+        <a class="p-2 text-dark" href="#">Main Page</a>
       </nav>
 
     </div>
+
     <div class="container">
+
         <div class="row">
             <div class="col-5 offset-1">
                 <h1>Your city</h1>
@@ -40,38 +42,58 @@
                     {% for city in all_info %}
                     <script>
                         function initMap() {
-                            var pos = {"lat": {{city.lat}} "lng": {{city.lng}}};
+                            console.log({{city.lat}}, {{city.lng}});
+                            var pos = {"lat": {{city.lat}}, "lng": {{city.lng}}};
                             var opt;
                             opt = {
                                 center: pos,
-                                zoom: 10
+                                zoom: 12
                             };
-                            for (hotel in city.hotels){
-                                var myMap = new google.maps.Map(document.getElementById('map'), opt);
-                                var new_pos = {"lat": {{hotel.lat}} "lng": {{hotel.lng}}};
+                            var myMap = new google.maps.Map(document.getElementById('map'), opt);
+                            {% for hotel in city.hotels %}
+                                var marker_pos = {"lat": {{hotel.lat}}, "lng": {{hotel.lng}}};
+                                console.log(marker_pos);
                                 var marker = new google.maps.Marker({
-                                    position: new_pos,
+                                    position: marker_pos,
                                     map: myMap,
                                     title: "Marker",
                                     icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-                                    });
-                                var info = new google.maps.InfoWindow({
-                                    content: '<h3>Place for info</h3><p>Description of the place</p>'
-                                     });
+                                });
+
                                 marker.addListener("click", function () {
                                     info.open(myMap, marker);
-                                    })
-                            }
-
+                                })
+                            {% endfor %}
                         }
                     </script>
                     {% endfor %}
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8Yg8zsn2E2YXROgYGaKz-LxiBU9QC5Ac&callback=initMap"
                     async defer></script>
+
+                <h1>Hotels list</h1>
+                {% for city in all_info %}
+                <h1>Hotels in {{city.city}}</h1>
+                    {% for hotel in city.hotels %}
+                        <div class="alert alert-info">
+                            <div class="row">
+                                <div class="col-9">
+                                    <b>Hotel:</b> {{hotel.name}}<br>
+                                    <b>Address:</b> {{hotel.address}}<br>
+                                    <b>Rating:</b> {{hotel.rating}}<br>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
                 </div>
 
+
             <div class="col-4 offset-1">
-                <h1>Information</h1>
+
+                <h1>General information</h1>
                 {% for info in all_info %}
                 <div class="alert alert-info">
                     <div class="row">
@@ -104,6 +126,7 @@
 
                 </div>
                 {% endfor %}
+                <img src="static/picture.jpg", height="400", width="400">
 
 
             </div>

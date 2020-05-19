@@ -74,7 +74,8 @@ pip install wikipedia
 
 ## Usage examples
 
+Site interface:
+![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/site_interface.jpg)
 
-
-
-
+![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/hotels_list1.jpg)
+![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/hotels_list2.jpg)

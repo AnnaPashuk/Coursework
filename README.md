@@ -3,7 +3,8 @@
 Check it out: https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp
 
 
-Video preview: 
+Video preview: https://youtu.be/bps6DY_wudk 
+https://github.com/AnnaPashuk/Coursework/blob/master/docs/video_presentation.avi
 
 
 ## Table of contents

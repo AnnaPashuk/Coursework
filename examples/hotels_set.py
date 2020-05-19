@@ -7,7 +7,6 @@ query using Google Places API
 # importing required modules
 import json
 import requests
-from key import key
 
 
 def create_hotels_dict(city):
@@ -24,7 +23,8 @@ def create_hotels_dict(city):
     # The text string on which to search
     # get method of requests module
     # return response object
-    query = "Hotels in" + city
+    query = "Hotels in " + city
+    # query = city
     hotels_request = requests.get(url + 'query=' + query +
                                   '&key=' + api_key)
 
@@ -36,12 +36,18 @@ def create_hotels_dict(city):
     with open('data.json', 'w', encoding='utf-8') as fle:
         json.dump(whole_json, fle, ensure_ascii=False, indent=4)
     results = whole_json['results']
-    hotels_dict = {}
-    for i in range(len(results)):
-        hotels_dict[results[i]['name']] = (results[i]['formatted_address'], results[i]['rating'])
-    return hotels_dict
+    print(results)
+    print(type(results))
+    print(results[0]['geometry']['location']['lat'])
+    # hotels_dict = {}
+    # for i in range(len(results)):
+    #     hotels_dict[results[i]['name']] = (results[i]['formatted_address'], results[i]['rating'],
+    #                                        (results[i]['geometry']['location']['lat'],
+    #                                         results[i]['geometry']['location']['lng']))
+    # return hotels_dict
 
 
 if __name__ == "__main__":
-    CITY = input('In what city do you want to search hotels?: ')
+    # CITY = input('In what city do you want to search hotels?: ')
+    CITY= 'Lviv'
     print(create_hotels_dict(CITY))

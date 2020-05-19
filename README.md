@@ -1,9 +1,9 @@
-## Project name: 
+## Project name: Hotels App
 
-Check it out:
+Check it out: https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp
 
 
-Video preview:
+Video preview: 
 
 
 ## Table of contents
@@ -43,8 +43,15 @@ Video preview:
  
  ### Example modules
  
+ [create hotels set with API](https://github.com/AnnaPashuk/Coursework/blob/master/examples/hotels_set.py)
  
+ [example of JSON](https://github.com/AnnaPashuk/Coursework/blob/master/examples/city_hotels.json)
+ 
+ [example of wikipedia lib work](https://github.com/AnnaPashuk/Coursework/blob/master/examples/wikipedia_lib_test.py)
 
+ [ADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array.py)
+ 
+ [testingADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array_test.py)
 
 ## Installation
 

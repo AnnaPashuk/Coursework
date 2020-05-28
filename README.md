@@ -42,7 +42,7 @@ All output data is represented on a website.
 
  ## Program structure
  
- [main module](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp) - The whole Django application:
+ [Main module](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp) - The whole Django application:
  
  * [HotelsApp](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/HotelsApp) - general application          module:
  

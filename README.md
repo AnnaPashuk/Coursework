@@ -42,21 +42,32 @@ All output data is represented on a website.
 
  ## Program structure
  
+ [main module](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp) - The whole Django application.
+ [HotelsApp](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/HotelsApp) - general application module
+ [map](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/map) - main page
+
  
 
  
  
  ### Example modules
  
- [create hotels set with API](https://github.com/AnnaPashuk/Coursework/blob/master/examples/hotels_set.py)
- 
- [example of JSON](https://github.com/AnnaPashuk/Coursework/blob/master/examples/city_hotels.json)
- 
- [example of wikipedia lib work](https://github.com/AnnaPashuk/Coursework/blob/master/examples/wikipedia_lib_test.py)
 
  [ADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array.py)
  
  [testingADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array_test.py)
+ 
+ [create hotels set with API](https://github.com/AnnaPashuk/Coursework/blob/master/examples/hotels_set.py)
+ 
+ [example of JSON](https://github.com/AnnaPashuk/Coursework/blob/master/examples/city_hotels.json)
+ 
+ [data.json](https://github.com/AnnaPashuk/Coursework/blob/master/examples/data.json) - example of JSON file we get after API requests.
+ 
+ [example of wikipedia lib work](https://github.com/AnnaPashuk/Coursework/blob/master/examples/wikipedia_lib_test.py)
+
+ [key.py](https://github.com/AnnaPashuk/Coursework/blob/master/examples/key.py) - you need to add your API key in this module
+
+ [pictures_examples](https://github.com/AnnaPashuk/Coursework/tree/master/pictures_examples) - examples of site work and ADT structure.
 
 ## Installation
 

@@ -139,5 +139,5 @@ Site interface:
 * Anna Pashuk, Ukrainian Catholic University, 2020
 
 ## Licence
-
+[MIT License](https://github.com/AnnaPashuk/Coursework/blob/master/LICENSE)
 

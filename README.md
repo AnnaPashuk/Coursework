@@ -97,7 +97,7 @@ All output data is represented on a website.
 
 ## Installation
 
-Clone repasitory: 
+Clone repository: 
 ```bash
 git clone https://github.com/AnnaPashuk/Coursework
 ```

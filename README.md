@@ -42,9 +42,35 @@ All output data is represented on a website.
 
  ## Program structure
  
- [main module](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp) - The whole Django application.
- [HotelsApp](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/HotelsApp) - general application module
- [map](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/map) - main page
+ [main module](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp) - The whole Django application:
+ 
+ * [HotelsApp](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/HotelsApp) - general application          module:
+ 
+      * [asgi.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/HotelsApp/asgi.py) - ASGI config for HotelsApp project.
+      
+      * [settings.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/HotelsApp/settings.py) - all settings of a website (don't forget to insert your Django key!)
+      
+      * [urls.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/HotelsApp/urls.py) - the `urlpatterns` list routes URLs to views.
+      
+      * [wsgi.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/HotelsApp/wsgi.py) - WSGI config for HotelsApp project.
+      
+    
+  
+ * [map](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/map) - main page:
+ 
+      * [migrations](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/map/migrations)
+      
+      * [templates](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/map/templates):
+      
+         * [city_array.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/templates/city_array.py) - my ADT
+         * [hotels](https://github.com/AnnaPashuk/Coursework/tree/master/hotelsmap_django_html/HotelsApp/map/templates/hotels) : 
+            * [index.html](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/templates/hotels/index.html) - all page interface
+      * [admin.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/admin.py) - registrating admin panel
+      * [apps.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/apps.py) - adding apps
+      * [forms.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/forms.py) - adding CityForm for saving all searched cityes.
+      * [models.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/models.py) - creating class City to add in forms
+      * [urls.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/urls.py) -the `urlpatterns` list routes URLs to views. 
+      * [views.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/views.py) - madule ith all functions
 
  
 
@@ -95,10 +121,6 @@ You gen get it here: https://cloud.google.com/maps-platform/?_ga=2.228158749.166
 
 Site interface:
 ![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/site_interface.jpg)
-
-
-
-![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/hotels_list1.jpg)
 
 
 ![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/hotels_list2.jpg)

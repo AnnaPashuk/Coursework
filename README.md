@@ -98,7 +98,10 @@ All output data is represented on a website.
 ## Installation
 
 Clone repasitory: 
+```bash
 git clone https://github.com/AnnaPashuk/Coursework
+```
+
 
 Install:
 
@@ -114,8 +117,11 @@ pip install django
 pip install wikipedia
 ```
 
-Also you need Google Maps API 
+Also you need Google Maps API.
 You gen get it here: https://cloud.google.com/maps-platform/?_ga=2.228158749.1663879752.1589873602-2070032628.1586961081
+Do not forget to insert your Django key in module [settings.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/HotelsApp/settings.py)
+And Google Maps API key in modules [views.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/views.py) and [index.html](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/templates/hotels/index.html)
+
 
 ## Usage examples
 

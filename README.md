@@ -38,6 +38,7 @@ This will help the tourist to create his own route and view all information abou
 ## Input and Output
 
 All input data was loaded with Google Maps API : https://cloud.google.com/maps-platform/?_ga=2.228158749.1663879752.1589873602-2070032628.1586961081
+
 All output data is represented on a website.
 
  ## Program structure
@@ -79,21 +80,21 @@ All output data is represented on a website.
  ### Example modules
  
 
- [ADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array.py)
+ * [ADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array.py)
  
- [testingADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array_test.py)
+ * [testingADT module](https://github.com/AnnaPashuk/Coursework/blob/master/adt/city_array_test.py)
  
- [create hotels set with API](https://github.com/AnnaPashuk/Coursework/blob/master/examples/hotels_set.py)
+ * [create hotels set with API](https://github.com/AnnaPashuk/Coursework/blob/master/examples/hotels_set.py)
  
- [example of JSON](https://github.com/AnnaPashuk/Coursework/blob/master/examples/city_hotels.json)
+ * [example of JSON](https://github.com/AnnaPashuk/Coursework/blob/master/examples/city_hotels.json)
  
- [data.json](https://github.com/AnnaPashuk/Coursework/blob/master/examples/data.json) - example of JSON file we get after API requests.
+ * [data.json](https://github.com/AnnaPashuk/Coursework/blob/master/examples/data.json) - example of JSON file we get after API requests.
  
- [example of wikipedia lib work](https://github.com/AnnaPashuk/Coursework/blob/master/examples/wikipedia_lib_test.py)
+ * [example of wikipedia lib work](https://github.com/AnnaPashuk/Coursework/blob/master/examples/wikipedia_lib_test.py)
 
- [key.py](https://github.com/AnnaPashuk/Coursework/blob/master/examples/key.py) - you need to add your API key in this module
+ * [key.py](https://github.com/AnnaPashuk/Coursework/blob/master/examples/key.py) - you need to add your API key in this module
 
- [pictures_examples](https://github.com/AnnaPashuk/Coursework/tree/master/pictures_examples) - examples of site work and ADT structure.
+ * [pictures_examples](https://github.com/AnnaPashuk/Coursework/tree/master/pictures_examples) - examples of site work and ADT structure.
 
 ## Installation
 
@@ -119,13 +120,15 @@ pip install wikipedia
 
 Also you need Google Maps API.
 You gen get it here: https://cloud.google.com/maps-platform/?_ga=2.228158749.1663879752.1589873602-2070032628.1586961081
+
 Do not forget to insert your Django key in module [settings.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/HotelsApp/settings.py)
-And Google Maps API key in modules [views.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/views.py) and [index.html](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/templates/hotels/index.html)
+and Google Maps API key in modules [views.py](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/views.py) and [index.html](https://github.com/AnnaPashuk/Coursework/blob/master/hotelsmap_django_html/HotelsApp/map/templates/hotels/index.html)
 
 
 ## Usage examples
 
 Site interface:
+
 ![](https://github.com/AnnaPashuk/Coursework/blob/master/pictures_examples/site_interface.jpg)
 
 
